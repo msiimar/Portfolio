@@ -143,7 +143,7 @@ def main():
 		with c5:
 			# Crypto market resources
 			st.text('Crypto Markets:')
-			st.text('* [CoinDesk](https://www.coindesk.com/)')
+			st.write('* [CoinDesk](https://www.coindesk.com/)')
 
 		# Layout for crypto market table and graphs
 		c1, c2, c3 = st.columns([2, 1.25, 0.75])
