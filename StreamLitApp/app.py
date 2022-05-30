@@ -125,7 +125,7 @@ def main():
 		nr_coins = int(market.get('Market')[4])
 
 		# Layout for crypto market metric cards
-		c1, c2, c3, c4 = st.columns(4)
+		c1, c2, c3, c4, c5 = st.columns(5)
 
 		# Crypto market metrics
 		with c1:
@@ -139,6 +139,9 @@ def main():
 
 		with c4:
 			st.metric('# of Coins', nr_coins)
+			
+		with c5:
+			st.text('')
 
 		# Layout for crypto market table and graphs
 		c1, c2, c3 = st.columns([2, 1.25, 0.75])
