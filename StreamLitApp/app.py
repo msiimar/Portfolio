@@ -120,9 +120,9 @@ def main():
 		# Crypto market metrics
 		market_cap = market.get('Market')[0].replace(',','.')[0:6] + 'T'
 		change = float(market.get('Market')[1])
-		trade_vol = market.get('Market')[2]
+		trade_vol = market.get('Market')[2].replace(',','.')[0:6] + 'B'
 		bit_dom = market.get('Market')[3] + '%'
-		nr_coins = int(market.get('Market')[4]).replace(',','.')[0:6] + 'B'
+		nr_coins = int(market.get('Market')[4])
 
 		# Layout for crypto market metric cards
 		c1, c2, c3, c4 = st.columns(4)
