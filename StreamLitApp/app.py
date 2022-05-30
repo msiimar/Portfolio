@@ -14,7 +14,6 @@ warnings.filterwarnings('ignore')
 alt.renderers.enable(embed_options={'theme': 'quartz'})
 
 # Importing data
-#~/Desktop/Stock Project/cryptoData/
 data = pd.read_csv('/app/portfolio/StreamLitApp/coinData.csv').drop(columns = 'Unnamed: 0').rename(columns = {'Hist. Date': 'Date'})
 prices = pd.read_csv('/app/portfolio/StreamLitApp/Prices.csv').rename(columns = {'Trans. Date': 'Date'})
 avg_price = pd.read_csv('/app/portfolio/StreamLitApp/AvgPrice.csv')
@@ -29,8 +28,7 @@ coinTable = pd.read_csv('/app/portfolio/StreamLitApp/coinTable.csv')
 with open('/app/portfolio/StreamLitApp/cryptoJSON.json', 'r') as market:
     market = json.load(market)
 
-# Dropping and renaming columns
-#~/Desktop/Stock Project/cryptoData/
+# Reformating a column
 data['Date'] = pd.to_datetime(data['Date'])
 
 
