@@ -15,23 +15,22 @@ alt.renderers.enable(embed_options={'theme': 'quartz'})
 
 # Importing data
 #~/Desktop/Stock Project/cryptoData/
-data = pd.read_csv('/app/portfolio/StreamLitApp/coinData.csv')
-prices = pd.read_csv('Prices.csv').rename(columns = {'Trans. Date': 'Date'})
-avg_price = pd.read_csv('AvgPrice.csv')
-portfolio = pd.read_csv('portfolio.csv')
-crypto = pd.read_csv('cryptoTransactions.csv')
-currency = pd.read_csv('currencyTransactions.csv')
-risk_df = pd.read_csv('fearData.csv')
-index = pd.read_csv('indexData.csv')
-coinTable = pd.read_csv('coinTable.csv')
+data = pd.read_csv('/app/portfolio/StreamLitApp/coinData.csv').drop(columns = 'Unnamed: 0').rename(columns = {'Hist. Date': 'Date'})
+prices = pd.read_csv('/app/portfolio/StreamLitApp/Prices.csv').rename(columns = {'Trans. Date': 'Date'})
+avg_price = pd.read_csv('/app/portfolio/StreamLitApp/AvgPrice.csv')
+portfolio = pd.read_csv('/app/portfolio/StreamLitApp/portfolio.csv')
+crypto = pd.read_csv('/app/portfolio/StreamLitApp/cryptoTransactions.csv')
+currency = pd.read_csv('/app/portfolio/StreamLitApp/currencyTransactions.csv')
+risk_df = pd.read_csv('/app/portfolio/StreamLitApp/fearData.csv')
+index = pd.read_csv('/app/portfolio/StreamLitApp/indexData.csv')
+coinTable = pd.read_csv('/app/portfolio/StreamLitApp/coinTable.csv')
 
 #../Stock Project/cryptoData/
-with open('cryptoJSON.json', 'r') as market:
+with open('/app/portfolio/StreamLitApp/cryptoJSON.json', 'r') as market:
     market = json.load(market)
 
 # Dropping and renaming columns
 #~/Desktop/Stock Project/cryptoData/
-data = pd.read_csv('coinData.csv').drop(columns = 'Unnamed: 0').rename(columns = {'Hist. Date': 'Date'})
 data['Date'] = pd.to_datetime(data['Date'])
 
 
