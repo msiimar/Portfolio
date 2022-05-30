@@ -94,7 +94,7 @@ def main():
 
 		# Traditional market resources
 		with c4:
-			st.write('Markets:')
+			st.write('Traditional Markets:')
 			st.write(' * [Wall Street Journal](https://www.wsj.com/)')
 			st.write(
 				' * [Yahoo Finance](https://finance.yahoo.com/?guccounter=1&guce_referrer=aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS8&guce_referrer_sig=AQAAANCpEZowy6FIk2H6-yaZ_ThU5V4RplEogh9yLY_sGx6G9QEcAfjBN1w-lakmH8vLwFY2O7M9QaxbZYHT_5GBAiFkFcH-snBwzzdm-RiXSCg_Nm2JxQovImd79EjAchv_c0xtvwZEKVGmfl1WIGo2YtX8Rlcirg0uCY0n1vsvybfC)')
@@ -141,14 +141,16 @@ def main():
 			st.metric('# of Coins', nr_coins)
 			
 		with c5:
-			st.text('')
+			# Crypto market resources
+			st.text('Crypto Markets:')
+			st.text('* [CoinDesk](https://www.coindesk.com/)')
 
 		# Layout for crypto market table and graphs
 		c1, c2, c3 = st.columns([2, 1.25, 0.75])
 
 		with c1:
 			st.text('')
-
+			
 			# CSS code that hides dataframe index column
 			hide_table_row_index = """
 											 <style>
