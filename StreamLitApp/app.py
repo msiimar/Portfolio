@@ -301,7 +301,7 @@ def main():
 			coin_data = data.loc[data['Label'] == coin]
 			recent = coin_data.tail(1)
 			pl = round(recent['Net P&L'].values[0], 2) # P&L
-			iv = round(recent['Investment Value'].values[0], 2) # Investment Value
+			iv = int(recent['Investment Value'].values[0]) # Investment Value
 			close = round(recent['Close'].values[0], 2) # Close Price
 			va = int(recent['Value At Transaction'].values[0]) # Value at transaction
 			amount = round(recent['Coin Amount'].values[0], 2) # Coin amount
