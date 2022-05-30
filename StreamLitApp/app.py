@@ -303,7 +303,7 @@ def main():
 			pl = round(recent['Net P&L'].values[0], 2) # P&L
 			iv = round(recent['Investment Value'].values[0], 2) # Investment Value
 			close = round(recent['Close'].values[0], 2) # Close Price
-			va = round(recent['Value At Transaction'].values[0], 0) # Value at transaction
+			va = int(recent['Value At Transaction'].values[0]) # Value at transaction
 			amount = round(recent['Coin Amount'].values[0], 2) # Coin amount
 			roi = round((iv - va) / va * 100, 2) # RoI
 			avgPrice = round(avg_price.loc[avg_price['Crypto Currency'] == coin]['Weighted Avg Price'].values[0], 2) # Weighted average price
