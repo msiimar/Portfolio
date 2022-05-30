@@ -15,7 +15,7 @@ alt.renderers.enable(embed_options={'theme': 'quartz'})
 
 # Importing data
 #~/Desktop/Stock Project/cryptoData/
-data = pd.read_csv('msiimar/Portfolio/StreamlLitApp/coinData.csv')
+data = pd.read_csv('coinData.csv')
 prices = pd.read_csv('Prices.csv').rename(columns = {'Trans. Date': 'Date'})
 avg_price = pd.read_csv('AvgPrice.csv')
 portfolio = pd.read_csv('portfolio.csv')
