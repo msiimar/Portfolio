@@ -43,7 +43,7 @@ def main():
 	# Sidebar
 
 	# Sidebar dropdown menu
-	activity = ['Portfolio', 'Streategy', 'Investors']
+	activity = ['Portfolio', 'Strategy', 'Investors']
 	choice = st.sidebar.selectbox('Select Interest', activity)
 
 
