@@ -118,7 +118,7 @@ def main():
 		st.subheader('')
 
 		# Crypto market metrics
-		market_cap = market.get('Market')[0]
+		market_cap = market.get('Market')[0][0:4] + 'T'
 		change = float(market.get('Market')[1])
 		trade_vol = market.get('Market')[2]
 		bit_dom = market.get('Market')[3] + '%'
